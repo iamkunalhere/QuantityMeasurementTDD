@@ -15,8 +15,7 @@ it('given 0 feet and 1 feet should return not equal', function() {
 
 it('given null value to feet should return wrong input', function() {
     let feet1 = getLength.lengthsComparator.Feet(null);
-    let feet2 = getLength.lengthsComparator.Feet(1.0);
-    assert.isNull(feet1,feet2);
+    assert.isNull(null,feet1);
 });
 
 it('given value type should return number', function() {
@@ -38,8 +37,7 @@ it('given 0 inch and 1 inch should return not equal', function() {
 
 it('given null value to inch should return wrong input', function() {
     let inch1 = getLength.lengthsComparator.Inch(null);
-    let inch2 = getLength.lengthsComparator.Inch(1.0);
-    assert.isNull(inch1,inch2);
+    assert.isNull(null,inch1);
 });
 
 it('given value type should return number', function() {
@@ -57,4 +55,4 @@ it('given values in feet and inch if equal should return equal', function() {
     let feet = getLength.lengthsComparator.Feet(1.0);
     let inch = getLength.lengthsComparator.Inch(12.0);
     assert.equal(feet,inch);
-})
+});
