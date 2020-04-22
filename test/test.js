@@ -97,4 +97,32 @@ it('given 2 inch and 5 centimeter should return equal', function(){
     let inch = getLength.lengthsComparator.Inch(2.0);
     let cm = getLength.lengthsComparator.Centimeter(5.0);
     assert.equal(inch,cm);
+});
+
+it('given 2 inch and 2 inch addition should return 4 inch', function() {
+    let inch1 = getLength.lengthsComparator.Inch(2.0);
+    let inch2 = getLength.lengthsComparator.Inch(2.0);
+    let addition = getLength.lengthsComparator.Addition(inch1,inch2);
+    assert.equal(4,addition);
+});
+
+it('given 1 feet and 2 inch addtion should return 14 inch', function() {
+    let feet = getLength.lengthsComparator.Feet(1.0);
+    let inch = getLength.lengthsComparator.Inch(2.0);
+    let addition = getLength.lengthsComparator.Addition(feet,inch);
+    assert.equal(14,addition);
+});
+
+it('given 1 feet and 1 feet addtion should return 24 inch', function() {
+    let feet1 = getLength.lengthsComparator.Feet(1.0);
+    let feet2 = getLength.lengthsComparator.Feet(1.0);
+    let addition = getLength.lengthsComparator.Addition(feet1,feet2);
+    assert.equal(24,addition);
+});
+
+it('given 2 inch and 2.5 centimeter addition should return 3 inch', function() {
+    let inch = getLength.lengthsComparator.Inch(2.0);
+    let cm = getLength.lengthsComparator.Centimeter(2.5);
+    let addition = getLength.lengthsComparator.Addition(inch,cm);
+    assert.equal(3,addition);
 })

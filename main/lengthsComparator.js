@@ -11,6 +11,9 @@ Yard: (yard) => {
 },
 Centimeter: (centimeter) => {
     return centimeter*0.4;
+},
+Addition: (parameter1,parameter2) => {
+    return parameter1+parameter2;
 }
 }
 module.exports = {lengthsComparator};
