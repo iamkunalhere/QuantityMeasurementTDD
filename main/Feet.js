@@ -1,5 +1,5 @@
 function Feet(feet) {
-    this.feet = feet;
+    return feet;
 }
 
 module.exports = {Feet};
