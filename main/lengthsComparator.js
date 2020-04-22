@@ -14,6 +14,15 @@ Centimeter: (centimeter) => {
 },
 Addition: (parameter1,parameter2) => {
     return parameter1+parameter2;
+},
+Gallon: (gallon) => {
+    return gallon*3.78;
+},
+Liter: (liter) => {
+    return liter;
+},
+Milliliter: (milliliter) => {
+    return milliliter/1000;
 }
 }
 module.exports = {lengthsComparator};

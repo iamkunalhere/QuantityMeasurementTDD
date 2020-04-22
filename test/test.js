@@ -125,4 +125,16 @@ it('given 2 inch and 2.5 centimeter addition should return 3 inch', function() {
     let cm = getLength.lengthsComparator.Centimeter(2.5);
     let addition = getLength.lengthsComparator.Addition(inch,cm);
     assert.equal(3,addition);
-})
+});
+
+it('given 1 gallon and 3.78 liters should return equal', function() {
+    let gallon = getLength.lengthsComparator.Gallon(1.0);
+    let liter = getLength.lengthsComparator.Liter(3.78);
+    assert.equal(gallon,liter);
+});
+
+it('given 1 liter and 1000 ml should return equal', function() {
+    let liter = getLength.lengthsComparator.Liter(1.0);
+    let ml = getLength.lengthsComparator.Milliliter(1000);
+    assert.equal(liter,ml);
+});
