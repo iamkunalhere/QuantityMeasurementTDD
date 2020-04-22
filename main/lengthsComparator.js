@@ -23,6 +23,15 @@ Liter: (liter) => {
 },
 Milliliter: (milliliter) => {
     return milliliter/1000;
+},
+Kg: (kg) => {
+    return kg;
+},
+Grams: (grams) => {
+    return grams/1000;
+},
+Ton: (ton) => {
+    return ton*1000;
 }
 }
 module.exports = {lengthsComparator};

@@ -153,3 +153,21 @@ it ('given 1 liter and 1000 ml additon should return 2 liters', function() {
     assert.equal(2,addition);
 });
 
+it('given 1 kg and 1000 grams should return equal', function() {
+    let kg = getLength.lengthsComparator.Kg(1.0);
+    let grams = getLength.lengthsComparator.Grams(1000);
+    assert.equal(kg,grams);
+});
+
+it('given 1 ton and 1000 kgs should return equal', function() {
+    let ton = getLength.lengthsComparator.Ton(1.0);
+    let kg = getLength.lengthsComparator.Kg(1000);
+    assert.equal(ton,kg);
+});
+
+it('given 1 ton and 1000 grams addition should retun 1001 kg', function() {
+    let ton = getLength.lengthsComparator.Ton(1.0);
+    let grams = getLength.lengthsComparator.Grams(1000);
+    let addition = getLength.lengthsComparator.Addition(ton,grams);
+    assert.equal(1001,addition);
+})
