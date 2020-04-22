@@ -5,6 +5,9 @@ Feet: (feet) => {
 },
 Inch: (inch) => {
     return inch;
+},
+Yard: (yard) => {
+    return yard*36;
 }
 }
 module.exports = {lengthsComparator};

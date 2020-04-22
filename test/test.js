@@ -56,3 +56,39 @@ it('given values in feet and inch if equal should return equal', function() {
     let inch = getLength.lengthsComparator.Inch(12.0);
     assert.equal(feet,inch);
 });
+
+it('given 3 feet and 1 yard should return equal', function() {
+    let feet = getLength.lengthsComparator.Feet(3.0);
+    let yard = getLength.lengthsComparator.Yard(1.0);
+    assert.equal(feet,yard);
+});
+
+it ('given 1 feet and 1 yard should return not equal', function() {
+    let feet = getLength.lengthsComparator.Feet(1.0);
+    let yard = getLength.lengthsComparator.Yard(1.0);
+    assert.notEqual(feet,yard);
+});
+
+it('given 1 inch and 1 yard should return not equal', function() {
+    let inch = getLength.lengthsComparator.Inch(1.0);
+    let yard = getLength.lengthsComparator.Yard(1.0);
+    assert.notEqual(inch,yard);
+});
+
+it('given 1 yard and 36 inch should return equal', function() {
+    let yard = getLength.lengthsComparator.Yard(1.0);
+    let inch = getLength.lengthsComparator.Inch(36.0);
+    assert.equal(yard,inch);
+});
+
+it('given 36 inch and 1 yard should return eqaul', function() {
+    let inch = getLength.lengthsComparator.Inch(36.0);
+    let yard = getLength.lengthsComparator.Yard(1.0);
+    assert.equal(inch,yard);
+});
+
+it('given 1 yard and 3 feet should return equal', function() {
+    let yard = getLength.lengthsComparator.Yard(1.0);
+    let feet = getLength.lengthsComparator.Feet(3.0);
+    assert.equal(yard,feet);
+});
