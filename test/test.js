@@ -92,3 +92,9 @@ it('given 1 yard and 3 feet should return equal', function() {
     let feet = getLength.lengthsComparator.Feet(3.0);
     assert.equal(yard,feet);
 });
+
+it('given 2 inch and 5 centimeter should return equal', function(){
+    let inch = getLength.lengthsComparator.Inch(2.0);
+    let cm = getLength.lengthsComparator.Centimeter(5.0);
+    assert.equal(inch,cm);
+})
