@@ -32,6 +32,12 @@ Grams: (grams) => {
 },
 Ton: (ton) => {
     return ton*1000;
+},
+Fahrenheit: (fahrenheit) => {
+    return fahrenheit;
+},
+Celsius: (celsius) => {
+    return (celsius * 9 / 5) + 32;
 }
 }
 module.exports = {lengthsComparator};

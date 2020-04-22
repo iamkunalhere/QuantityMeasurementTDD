@@ -170,4 +170,10 @@ it('given 1 ton and 1000 grams addition should retun 1001 kg', function() {
     let grams = getLength.lengthsComparator.Grams(1000);
     let addition = getLength.lengthsComparator.Addition(ton,grams);
     assert.equal(1001,addition);
-})
+});
+
+it('given 212 fahrenheit and 100 celsius should return equal', function() {
+    let fahrenheit = getLength.lengthsComparator.Fahrenheit(212);
+    let celsius = getLength.lengthsComparator.Celsius(100);
+    assert.equal(fahrenheit,celsius);
+});
