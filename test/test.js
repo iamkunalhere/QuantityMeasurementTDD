@@ -138,3 +138,18 @@ it('given 1 liter and 1000 ml should return equal', function() {
     let ml = getLength.lengthsComparator.Milliliter(1000);
     assert.equal(liter,ml);
 });
+
+it('given 1 gallon and 3.78 liters addition should return 7.57 liters', function() {
+    let gallon = getLength.lengthsComparator.Gallon(1.0);
+    let liter = getLength.lengthsComparator.Liter(3.78);
+    let addition = getLength.lengthsComparator.Addition(gallon,liter);
+    assert.equal(7.56,addition);
+});
+
+it ('given 1 liter and 1000 ml additon should return 2 liters', function() {
+    let liter = getLength.lengthsComparator.Liter(1.0);
+    let ml = getLength.lengthsComparator.Milliliter(1000);
+    let addition = getLength.lengthsComparator.Addition(liter,ml);
+    assert.equal(2,addition);
+});
+
