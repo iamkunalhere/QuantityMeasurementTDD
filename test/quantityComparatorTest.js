@@ -1,7 +1,10 @@
 var assert = require('chai').assert;
 var getLength = require('../main/lengthsComparator');
+var getWeight = require('../main/weightComparator');
+var getTempreture = require('../main/tempretureComparator');
+var performedAddition = require('../main/performedAddition');
 
-describe('Quantity Tests', function() {
+describe('Length quantity Tests', function() {
 
 // test to check that feet and 0 feet is equal
 it('given 0 feet and 0 feet should return equal', function() {
@@ -90,69 +93,77 @@ it('given 2 inch and 5 centimeter should return equal', function(){
 
 // test to check 2 inch and 2 inch addition is equal to 4 inch 
 it('given 2 inch and 2 inch addition should return 4 inch', function() {
-    let addition = getLength.lengthsComparator.Addition(getLength.lengthsComparator.Inch(2.0),getLength.lengthsComparator.Inch(2.0));
+    let addition = performedAddition.Addition(getLength.lengthsComparator.Inch(2.0),getLength.lengthsComparator.Inch(2.0));
     assert.equal(4,addition);
 });
 
 // test to check 1 feet and 2 inch addition is equal to 14 inch
 it('given 1 feet and 2 inch addtion should return 14 inch', function() {
-    let addition = getLength.lengthsComparator.Addition(getLength.lengthsComparator.Feet(1.0),getLength.lengthsComparator.Inch(2.0));
+    let addition = performedAddition.Addition(getLength.lengthsComparator.Feet(1.0),getLength.lengthsComparator.Inch(2.0));
     assert.equal(14,addition);
 });
 
 // test to check 1 feet and 1 feet addition is equal to 24 inch 
 it('given 1 feet and 1 feet addtion should return 24 inch', function() {
-    let addition = getLength.lengthsComparator.Addition(getLength.lengthsComparator.Feet(1.0),getLength.lengthsComparator.Feet(1.0));
+    let addition = performedAddition.Addition(getLength.lengthsComparator.Feet(1.0),getLength.lengthsComparator.Feet(1.0));
     assert.equal(24,addition);
 });
 
 // test to check 2 inch and 2.5 centimeter addition is equal to 3 inch
 it('given 2 inch and 2.5 centimeter addition should return 3 inch', function() {
-    let addition = getLength.lengthsComparator.Addition(getLength.lengthsComparator.Inch(2.0),getLength.lengthsComparator.Centimeter(2.5));
+    let addition = performedAddition.Addition(getLength.lengthsComparator.Inch(2.0),getLength.lengthsComparator.Centimeter(2.5));
     assert.equal(3,addition);
 });
 
+});
+
+describe('Weight quantity Tests', function() {
+
 // test to check 1 gallon and 3.78 liters is equal 
 it('given 1 gallon and 3.78 liters should return equal', function() {
-    assert.equal(getLength.lengthsComparator.Gallon(1.0),getLength.lengthsComparator.Liter(3.78));
+    assert.equal(getWeight.weightComparator.Gallon(1.0),getWeight.weightComparator.Liter(3.78));
 });
 
 // test to check 1 liter and 1000 ml is equal 
 it('given 1 liter and 1000 ml should return equal', function() {
-    assert.equal(getLength.lengthsComparator.Liter(1.0),getLength.lengthsComparator.Milliliter(1000));
+    assert.equal(getWeight.weightComparator.Liter(1.0),getWeight.weightComparator.Milliliter(1000));
 });
 
 // test to check 1 gallon and 3.78 liters addition is equal to 7.57 liters
 it('given 1 gallon and 3.78 liters addition should return 7.57 liters', function() {
-    let addition = getLength.lengthsComparator.Addition(getLength.lengthsComparator.Gallon(1.0),getLength.lengthsComparator.Liter(3.78));
+    let addition = performedAddition.Addition(getWeight.weightComparator.Gallon(1.0),getWeight.weightComparator.Liter(3.78));
     assert.equal(7.56,addition);
 });
 
 // test to check 1 liter and 1000 ml addition is equal to 2 liters
 it ('given 1 liter and 1000 ml additon should return 2 liters', function() {
-    let addition = getLength.lengthsComparator.Addition(getLength.lengthsComparator.Liter(1.0),getLength.lengthsComparator.Milliliter(1000));
+    let addition = performedAddition.Addition(getWeight.weightComparator.Liter(1.0),getWeight.weightComparator.Milliliter(1000));
     assert.equal(2,addition);
 });
 
 // test to check 1 kg and 1000 grams is equal
 it('given 1 kg and 1000 grams should return equal', function() {
-    assert.equal(getLength.lengthsComparator.Kg(1.0),getLength.lengthsComparator.Grams(1000));
+    assert.equal(getWeight.weightComparator.Kg(1.0),getWeight.weightComparator.Grams(1000));
 });
 
 // test to check 1 ton and 1000 kgs is equal 
 it('given 1 ton and 1000 kgs should return equal', function() {
-    assert.equal(getLength.lengthsComparator.Ton(1.0),getLength.lengthsComparator.Kg(1000));
+    assert.equal(getWeight.weightComparator.Ton(1.0),getWeight.weightComparator.Kg(1000));
 });
 
 // test to check 1 ton and 1000 grams addition is equal to 1001 kg
 it('given 1 ton and 1000 grams addition should retun 1001 kg', function() {
-    let addition = getLength.lengthsComparator.Addition(getLength.lengthsComparator.Ton(1.0),getLength.lengthsComparator.Grams(1000));
+    let addition = performedAddition.Addition(getWeight.weightComparator.Ton(1.0),getWeight.weightComparator.Grams(1000));
     assert.equal(1001,addition);
 });
 
+});
+
+describe('Tempreture quantity Tests', function() {
+
 // test to check 212 fahrenheit and 100 celsius is equal
 it('given 212 fahrenheit and 100 celsius should return equal', function() {
-    assert.equal(getLength.lengthsComparator.Fahrenheit(212),getLength.lengthsComparator.Celsius(100));
+    assert.equal(getTempreture.tempretureComparator.Fahrenheit(212),getTempreture.tempretureComparator.Celsius(100));
 });
 
 });
